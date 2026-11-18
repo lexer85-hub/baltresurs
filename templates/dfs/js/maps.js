@@ -1,6 +1,8 @@
 (function () {
     'use strict';
 
+    var iconUrl = new URL('../../../images/map_icon.png', document.currentScript.src).href;
+
     var maps = window.ymaps;
     if (!maps) {
         return;
@@ -22,7 +24,7 @@
                     balloonContent: container.dataset.place
                 }, {
                     iconLayout: 'default#image',
-                    iconImageHref: '/images/map_icon.png',
+                    iconImageHref: iconUrl,
                     iconImageSize: [67, 66],
                     iconImageOffset: [0, 0]
                 }));
